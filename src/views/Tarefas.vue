@@ -3,18 +3,8 @@
     <v-list flat subheader>
 
       <v-list-item-group v-model="settings" multiple active-class="">
-        <v-list-item>
-          <template v-slot:default="{ active }">
-            <v-list-item-action>
-              <v-checkbox :input-value="active"></v-checkbox>
-            </v-list-item-action>
 
-            <v-list-item-content>
-              <v-list-item-title>Notifications</v-list-item-title>
-            </v-list-item-content>
-          </template>
-        </v-list-item>
-
+        <Tarefa />
 
       </v-list-item-group>
     </v-list>
@@ -22,9 +12,11 @@
 </template>
 
 <script>
-
+import Tarefa from "../components/tarefas/Tarefa"
 export default {
   name: 'v-Home',
-
+  components: {
+    Tarefa
+  },
 }
 </script>
